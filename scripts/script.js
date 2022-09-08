@@ -1,22 +1,28 @@
-function getTime() {
+function timeGet() {
   let localTime = new Date().getHours() + ':'
     + new Date().getMinutes() + ':'
-    + new Date().getSeconds();
-  setTime(localTime);
+    + new Date().getSeconds()
+  let timeDoc = document.querySelector('#localtime');
+
+  timeDoc.innerHTML = localTime;
+
+  alarmSet(localTime);
 }
 
-function setTime(localTime) {
-  document.querySelector('#localtime')
-    .innerHTML = localTime;
-}
+function alarmSet(localTime) {
+  localTime = localTime.slice(0, 5);
+  console.log(`Horário: ${localTime}`);
 
-function setAlarm() {
-  let alarmTime = document.querySelector('#set-alarm').value;
-  console.log(`Horário: ${alarmTime}`);
+  button.onclick = function () {
+    let alarmTime = document.querySelector('#set-alarm').value;
+    console.log(`Horário do alarme: ${alarmTime}`);
+  }
+
+  if (localTime == '22:11') {
+    console.log('ACORDE!');
+  }
 }
 
 let button = document.querySelector('#set-button');
 
-button.onclick = setAlarm;
-
-setInterval(getTime, 1000);
+setInterval(timeGet, 1000);

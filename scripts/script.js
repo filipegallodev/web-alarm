@@ -1,7 +1,12 @@
 function timeGet() {
-  let localTime = new Date().getHours() + ':'
-    + new Date().getMinutes() + ':'
-    + new Date().getSeconds()
+  let localTimeHours = new Date().getHours();
+  let localTimeMinutes = minutesGet();
+  let localTimeSeconds = secondsGet();
+
+  let localTime = localTimeHours + ':'
+    + localTimeMinutes + ':'
+    + localTimeSeconds;
+
   let timeDoc = document.querySelector('#localtime');
 
   timeDoc.innerHTML = localTime;
@@ -9,20 +14,41 @@ function timeGet() {
   alarmSet(localTime);
 }
 
+function minutesGet() {
+  let localTimeMinutes = new Date().getMinutes();
+  if (localTimeMinutes < 10) {
+    localTimeMinutes = "0" + localTimeMinutes;
+  }
+  return localTimeMinutes;
+}
+
+function secondsGet() {
+  let localTimeSeconds = new Date().getSeconds();
+  if (localTimeSeconds < 10) {
+    localTimeSeconds = "0" + localTimeSeconds;
+  }
+  return localTimeSeconds;
+}
+
 function alarmSet(localTime) {
   localTime = localTime.slice(0, 5);
   console.log(`Horário: ${localTime}`);
 
   button.onclick = function () {
-    let alarmTime = document.querySelector('#set-alarm').value;
+    let alarmTime = document.querySelector('#alarm-choice').value;
+    document.querySelector('#alarmtime').innerHTML = alarmTime;
     console.log(`Horário do alarme: ${alarmTime}`);
   }
 
-  if (localTime == '22:11') {
-    console.log('ACORDE!');
+  let alarmTime = document.querySelector('#alarmtime');
+
+  alarmTime = alarmTime.textContent.trim();
+
+  if (localTime == alarmTime) {
+    alert('ACORDE!');
   }
 }
 
-let button = document.querySelector('#set-button');
+let button = document.querySelector('#alarm-button-save');
 
 setInterval(timeGet, 1000);

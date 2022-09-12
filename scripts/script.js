@@ -7,11 +7,19 @@ function timeGet() {
     + localTimeMinutes + ':'
     + localTimeSeconds;
 
-  let timeDoc = document.querySelector('#localtime');
-
-  timeDoc.innerHTML = localTime;
+  htmlSetTime(localTimeHours, localTimeMinutes, localTimeSeconds);
 
   alarmSet(localTime);
+}
+
+function htmlSetTime(hours, minutes, seconds) {
+  let timeHours = document.querySelector('#hours');
+  let localMinutes = document.querySelector('#minutes');
+  let timeSeconds = document.querySelector('#seconds');
+
+  timeHours.innerHTML = hours;
+  localMinutes.innerHTML = minutes;
+  timeSeconds.innerHTML = seconds;
 }
 
 function minutesGet() {

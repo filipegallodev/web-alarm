@@ -1,51 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Despertador</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="header-container">
-        <div>
-          <h1>Alarme Online</h1>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Despertador</title>
+</head>
 
-    <main>
+<body>
+  <header>
+    <div class="header-container">
       <div>
-        <div class="time-container-main">
-          <h2>Horário</h2>
-          <div class="time-container">
-            <div>
-              <div id="hours" class="time"></div>
-              <div id="minutes" class="time"></div>
-              <div id="seconds" class="time"></div>
-            </div>
-          </div>
-        </div>
-        <input type="time" name="alarm" id="alarm-choice" />
-        <input
-          type="submit"
-          value="Salvar"
-          name="alarm"
-          id="alarm-button-save"
-        />
+        <h1>Alarme Online</h1>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Horário</h2>
+      <div class="time">
         <div>
-          <div>
-            <h2>Alarme</h2>
-            <div id="alarmtime"></div>
-          </div>
+          <div id="hours"></div>
+          <span>:</span>
+          <div id="minutes"></div>
+          <span>:</span>
+          <div id="seconds"></div>
         </div>
       </div>
-    </main>
+    </div>
 
-    <script src="scripts/script.js" async></script>
-  </body>
+    <div class="container">
+      <h2>Determinar alarme</h2>
+      <div>
+        <input class="input-time" type="time" name="alarm" id="alarm-choice" />
+      </div>
+      <div>
+        <input class="submit-time" type="submit" value="Definir alarme" name="alarm" id="alarm-button-save" />
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Alarme definido para às</h2>
+      <div>
+        <div id="alarm-time"></div>
+      </div>
+      <div>
+        <div id="parar-alarme"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <p>
+        Desenvolvido com AMOR por
+        <a href="https://github.com/filipegallodev" rel="external" target="_blank">Filipe</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js" async></script>
+</body>
+
 </html>

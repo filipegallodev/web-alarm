@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   background-color: #5ff;
-  border-bottom: 3px solid #555;
+  border-bottom: 3px solid #333;
   height: 100px;
   box-shadow: 1px 1px 15px 5px #000;
 }
@@ -18,17 +18,13 @@
   font-weight: bold;
 }
 
-.time-container-main {
+.container {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  height: 200px;
-  gap: 50px;
-}
-
-.time-container-main h2 {
-  font-size: 1.8rem;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 80px;
 }
 
 .time-container {
@@ -37,19 +33,90 @@
   justify-content: center;
 }
 
-.time {
-  display: inline;
-  background-color: #5ff;
-  padding: 5px;
-  border-radius: 5px;
-  border: 3px solid #555;
-  box-shadow: 1px 1px 10px 1px #000;
-  color: #111;
+.time-container {
   font-size: 3.5rem;
 }
 
-html {
-  background-color: #111111;
+.time {
+  display: inline;
+  background-color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  border: 3px solid #5ff;
+  box-shadow: 1px 1px 10px 1px #000;
+  font-size: 3.5rem;
+}
+
+.time div {
+  display: inline;
+}
+
+.input-time {
+  padding: 10px;
+  box-shadow: 1px 1px 10px 1px #000;
+  font-size: 2rem;
+}
+
+.submit-time {
+  background-color: #333;
+  border: 2px solid #5ff;
+  padding: 10px 20px;
+  box-shadow: 1px 1px 10px 1px #000;
   color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.submit-time:hover,
+#parar-alarme:hover {
+  background-color: #222;
+  border: 2px solid #fff;
+}
+
+#alarm-time {
+  border: 3px solid #ff5;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px #000;
+  padding: 10px;
+  font-size: 3rem;
+}
+
+#parar-alarme {
+  display: none;
+  border: 2px solid #f33;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px #000;
+  padding: 10px 20px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+html {
+  background-color: #111;
   font-family: 'Nunito Sans', sans-serif;
+  color: #fff;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+input {
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 80px;
+  padding: 50px 0 50px;
+  border-top: 3px solid #555;
+  box-shadow: 1px 1px 15px 1px #000;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #5ff;
+  font-weight: bold;
 }

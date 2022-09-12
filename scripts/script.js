@@ -44,16 +44,22 @@ function alarmSet(localTime) {
 
   button.onclick = function () {
     let alarmTime = document.querySelector('#alarm-choice').value;
-    document.querySelector('#alarmtime').innerHTML = alarmTime;
+    document.querySelector('#alarm-time').innerHTML = alarmTime;
     console.log(`Horário do alarme: ${alarmTime}`);
   }
 
-  let alarmTime = document.querySelector('#alarmtime');
+  let alarmTime = document.querySelector('#alarm-time');
+  let pararAlarme = document.querySelector('#parar-alarme');
 
   alarmTime = alarmTime.textContent.trim();
 
   if (localTime == alarmTime) {
     sound.play();
+    pararAlarme.innerHTML = 'PARAR';
+    pararAlarme.style.display = "block";
+  }
+  else {
+    pararAlarme.style.display = 'none';
   }
 }
 

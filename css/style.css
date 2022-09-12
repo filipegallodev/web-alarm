@@ -12,6 +12,11 @@
   box-shadow: 1px 1px 15px 5px #000;
 }
 
+.header-container img {
+  max-width: 50px;
+  margin-right: 10px;
+}
+
 .header-container h1 {
   color: #111;
   font-size: 2.5rem;
@@ -119,4 +124,9 @@ footer {
 footer a {
   color: #5ff;
   font-weight: bold;
+  transition: 0.5s;
+}
+
+footer a:hover {
+  color: #cff;
 }

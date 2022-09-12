@@ -45,19 +45,12 @@ function alarmSet(localTime) {
   alarmTime = alarmTime.textContent.trim();
 
   if (localTime == alarmTime) {
-<<<<<<< HEAD
     sound.play();
-=======
-    alert('ACORDE!');
->>>>>>> e1d3e057dd698432cd465ae81724ce58077d9606
   }
 }
 
 let button = document.querySelector('#alarm-button-save');
 
-<<<<<<< HEAD
 const sound = new Audio("src/audio/alarm.wav");
 
-=======
->>>>>>> e1d3e057dd698432cd465ae81724ce58077d9606
 setInterval(timeGet, 1000);
